@@ -8,7 +8,11 @@ function Avatar() {
   );
 }
 
-function Box({ size = 's' }) {
+interface BoxProps {
+  size?: string | number;
+}
+
+function Box({ size = 's' }: BoxProps) {
   const boxStyle = {
     width: typeof size === 'number' ? `${size}px` : size,
     height: typeof size === 'number' ? `${size}px` : size,
